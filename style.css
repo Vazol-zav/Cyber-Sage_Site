@@ -1,0 +1,47 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(270deg,
+    #00ff9d,
+    #00c3ff,
+    #8e2de2,
+    #00c3ff,
+    #00ff9d
+  );
+  background-size: 1000% 1000%;
+  animation: a-shift 30s ease infinite;
+  color: white;
+  margin: 0;
+}
+
+@keyframes a-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  font-size: 6vw;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3vw;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2vw;
+  text-align: left;
+}
+
+h4 {
+  font-size: 2vw;
+  text-align: center;
+}
+
+.content {
+  width: 80%;
+  max-width: 1000px;
+  text-align: left;
+  margin: 5rem auto;
+}
