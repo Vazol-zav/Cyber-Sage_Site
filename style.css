@@ -126,5 +126,5 @@ section {
   pointer-events: auto;
   box-shadow: 0 0 20px #9634a4;
   transition: transform 0.05s linear;
-  
+  z-index: 9999;
 }
