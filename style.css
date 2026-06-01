@@ -1,20 +1,34 @@
 /*system stuff & variables for background*/
+/*color vars*/
+:root{
+/*borealis color theme*/
+--agreen: #00ff9d;
+--acore: #00c3ff;/* core\blue */
+--avio: #8e2de2;
+--adark: #0f2027;
+/*cyber sage color theme?*/
+--cpurp: #5c58b6;
+--cpink: #b957ce;
+--cblue: #5994ce;
+--cdark: #3a4e93;
+}
 body {
   font-family: system-ui, sans-serif;
   background: linear-gradient(270deg,
-    #00ff9d,/*cyan*/
-    #00c3ff,/*blue*/
-    #8e2de2,/*purple*/
-    #000080,/*navy blue*/
-    #8e2de2,/*purplr*/
-    #00c3ff,/*blue*/
-    #00ff9d/*cyan*/
+    var(--agreen),/*cyan*/
+    var(--acore),/*blue*/
+    var(--avio),/*purple*/
+    var(--adark),/*navy blue*/
+    var(--avio),/*purplr*/
+    var(--acore),/*blue*/
+    var(--agreen)/*cyan*/
   );
   background-size: 1000% 1000%;
   animation: a-shift 45s ease-in-out infinite;
   color: white;
   margin: 0;
   line-height: 1.6; /* smoother reading */
+  cursor: none;
 }
 
 /* Background animation */
@@ -34,6 +48,7 @@ body {
   padding-top: 30px;
   position: relative;
   z-index: 10;
+  pointer-events: auto;
 }
 .CSlogo{
   width: 180px;
@@ -87,6 +102,7 @@ ul li {
   max-width: 1000px;
   margin: 5rem auto;
   text-align: left;
+  pointer-events: none;
 }
 
 /* Space between major sections */
@@ -100,4 +116,15 @@ section {
   50% {transform: translate(0,0) skewY(0deg);}
   75% {transform: translate(0,20px) skewY(-20deg);}
   100% {transform: translate(0,0) skewY(0deg);}
+}
+.orb{
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, var(--acore), var(--cpink));
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: auto;
+  box-shadow: 0 0 20px #9634a4;
+  transition: transform 0.05s linear;
+  
 }
