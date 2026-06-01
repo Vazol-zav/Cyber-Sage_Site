@@ -102,7 +102,7 @@ ul li {
   max-width: 1000px;
   margin: 5rem auto;
   text-align: left;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 /* Space between major sections */
