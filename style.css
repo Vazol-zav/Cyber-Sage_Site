@@ -11,7 +11,7 @@ body {
     #00ff9d/*cyan*/
   );
   background-size: 1000% 1000%;
-  animation: a-shift 30s ease infinite;
+  animation: a-shift 45s ease-in-out infinite;
   color: white;
   margin: 0;
   line-height: 1.6; /* smoother reading */
@@ -87,7 +87,7 @@ section {
 }
 /*animations in css*/
 @keyframes float{
-  0% {transform: translateY=0;}
-  50% {transform: translateY=-6px;}
-  100% {transform: translateY=0;}
+  0% {transform: translateY(0);}
+  50% {transform: translateY(-6px);}
+  100% {transform: translateY(0);}
 }
