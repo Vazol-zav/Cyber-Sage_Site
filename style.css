@@ -27,11 +27,19 @@ body {
 /* ------------------------------
    TYPOGRAPHY
 --------------------------------*/
+.site-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  position: relative;
+  z-index: 10;
+}
 .CSlogo{
   width: 180px;
   height: auto;
   mix-blend-mode: screen;
-  filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.4));
+  filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.6));
   animation: float 6s ease-in-out infinite;
 }
 h1 {
