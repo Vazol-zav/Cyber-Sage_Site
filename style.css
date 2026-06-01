@@ -27,6 +27,13 @@ body {
 /* ------------------------------
    TYPOGRAPHY
 --------------------------------*/
+.CSlogo{
+  width: 180px;
+  height: auto;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.4));
+  animation: float 6s ease-in-out infinite;
+}
 h1 {
   font-size: 6vw;
   text-align: center;
@@ -77,4 +84,10 @@ ul li {
 /* Space between major sections */
 section {
   margin: 4rem 0;
+}
+/*animations in css*/
+@keyframes float{
+  0% {transform: translateY=0;}
+  50% {transform: translateY=-6px;}
+  100% {transform: translateY=0;}
 }
