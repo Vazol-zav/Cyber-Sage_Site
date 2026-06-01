@@ -3,4 +3,4 @@ const orb = document.querySelector(".orb");
 
 
 document.addEventListener("mousemove", (event) => {
-  orb.style.transform = `translate(${event.clientX-20}px, ${event.clientY-20}px)`;
+  orb.style.transform = `translate(${event.clientX-20}px, ${event.clientY-20}px)`;});
