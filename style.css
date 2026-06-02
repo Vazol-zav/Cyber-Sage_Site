@@ -129,6 +129,17 @@ section {
   transition: transform 0.05s linear;
   z-index: 9999;
 }
+@keyframes ghostFX{
+  0%{opacity: 0.6;
+    transform: translate(-50%,-50%) scale(1);
+    }
+  50%{opacity: 0.3;
+    transform: translate(-50%,-75%) scale(1.5);
+    }
+  100%{opacity: 0.1;
+    transform: translate(-50%,-90%) scale(1.8);
+    }
+}
 .ghost {
   position: fixed;
   width: 40px;
@@ -136,9 +147,8 @@ section {
   border-radius: 50%;
   background: radial-gradient(circle, var(--acore), var(--cpurp));
   filter: blur(12px);
-  opacity: 0.6;
   pointer-events: auto;
   transform: translate(-50%, -50%);
-  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
   z-index: 9998;
+  animation: ghostFloat 0.4s ease-out forwards;
 }
