@@ -21,6 +21,6 @@ function spawnGhost(x, y) {
   setTimeout(() => ghost.remove(), 400);
 }
 
-document.addEventListener("mousemove", (e) => {
+window.addEventListener("mousemove", (e) => {
   spawnGhost(e.clientX, e.clientY);
 });
