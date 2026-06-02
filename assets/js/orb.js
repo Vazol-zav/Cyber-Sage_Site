@@ -14,9 +14,29 @@ function spawnGhost(x, y) {
 
   setTimeout(() => ghost.remove(), 400);
 }
+function spawnParticle(x, y) {
+  const p = document.createElement("div");
+  p.className = "particle";
+
+  p.style.left = x + "px";
+  p.style.top = y + "px";
+
+  document.body.appendChild(p);
+
+  const angle = Math.random() * Math.PI * 2;
+  const distance = 20 + Math.random() * 20;
+
+  const dx = Math.cos(angle) * distance;
+  const dy = Math.sin(angle) * distance;
+  requestAnimationFrame(() => {
+    p.style.transform = `translate(${dx}px, ${dy}px) scale(0.5)`;
+    p.style.opacity = "0";
+  });
+  setTimeout(() => p.remove(), 400);
+}
 
 
-
+//to keep performance smooth
 let lastSpawn = 0;
 const SPAWN_THROTTLE = 16;
 
@@ -25,5 +45,15 @@ window.addEventListener("mousemove", (e) => {
   if (now - lastSpawn > SPAWN_THROTTLE) {
     spawnGhost(e.clientX, e.clientY);
     lastSpawn = now;
+  }
+});
+let lastParticle = 0;
+const PARTICLE_THROTTLE = 12; // ~80 particles/sec max
+
+window.addEventListener("mousemove", (e) => {
+  const now = Date.now();
+  if (now - lastParticle > PARTICLE_THROTTLE) {
+    spawnParticle(e.clientX, e.clientY);
+    lastParticle = now;
   }
 });
