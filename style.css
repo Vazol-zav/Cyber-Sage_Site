@@ -128,3 +128,16 @@ section {
   transition: transform 0.05s linear;
   z-index: 9999;
 }
+.ghost {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--acore), var(--cpurp));
+  filter: blur(12px);
+  opacity: 0.6;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  z-index: 9998;
+}
