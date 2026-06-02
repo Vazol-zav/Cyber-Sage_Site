@@ -12,15 +12,23 @@ function spawnGhost(x, y) {
 
   document.body.appendChild(ghost);
 
-  // fade + remove
-  requestAnimationFrame(() => {
-    ghost.style.opacity = "0";
-    ghost.style.transform = "translate(-50%, -50%) scale(1.4)";
-  });
+  // Trigger animation on next frame
+  ghost.offsetHeight; // Force reflow
+  ghost.style.opacity = "0";
+  ghost.style.transform = "translate(-50%, -50%) scale(1.4)";
+  ghost.style.transition = "opacity 0.4s, transform 0.4s";
 
   setTimeout(() => ghost.remove(), 400);
 }
 
+// Throttle ghost spawning to ~60fps or less
+let lastSpawn = 0;
+const SPAWN_THROTTLE = 16; // ~60fps
+
 window.addEventListener("mousemove", (e) => {
-  spawnGhost(e.clientX, e.clientY);
+  const now = Date.now();
+  if (now - lastSpawn > SPAWN_THROTTLE) {
+    spawnGhost(e.clientX, e.clientY);
+    lastSpawn = now;
+  }
 });
