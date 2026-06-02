@@ -145,10 +145,23 @@ section {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--acore), var(--cpurp));
+  background: radial-gradient(circle, var(--cpurp), var(--cpink));
   filter: blur(12px);
   pointer-events: auto;
   transform: translate(-50%, -50%);
   z-index: 9998;
   animation: ghostFloat 0.4s ease-out forwards;
+}
+
+.particle {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--acore), var(--cpink));
+  pointer-events: none;
+  filter: blur(4px);
+  opacity: 1;
+  z-index: 9997;
+  transition: opacity 0.4s linear, transform 0.4s linear;
 }
