@@ -60,15 +60,18 @@ draw(ctx) {
 }
 /*spawner : ) */
 let pens = [];
-
+let PN = 2;
 draw.addEventListener("mousedown", (e) => {
-  for (let i = 0; i < 60; i++) {
+  for (let i = 0; i < PN; i++) {
     pens.push(new Pen(e.clientX, e.clientY));
   }
 });
 /*animation ex*/
 //update EX
 update() {
+  //V set PN
+  PN=60;
+  //set PN^
   //Vthis tells it move from there to here
     this.lastX = this.x;
     this.lastY = this.y;
