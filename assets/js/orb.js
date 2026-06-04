@@ -50,7 +50,7 @@ window.addEventListener("mousemove", (e) => {
 let lastParticle = 0;
 const PARTICLE_THROTTLE = 12; // ~80 particles/sec max
 
-window.addEventListener("mousemove", (e) => {
+window.addEventListener("mousedown", (e) => {
   const now = Date.now();
   if (now - lastParticle > PARTICLE_THROTTLE) {
     spawnParticle(e.clientX, e.clientY);
