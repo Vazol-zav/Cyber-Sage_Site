@@ -172,7 +172,7 @@ section {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--acore), var(--cpink));
+  background: radial-gradient(circle, var(--cpink), var(--cdark));
   pointer-events: none;
   filter: blur(4px);
   opacity: 0;
