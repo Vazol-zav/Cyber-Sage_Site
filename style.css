@@ -14,17 +14,7 @@
 }
 body {
   font-family: system-ui, sans-serif;
-  background: linear-gradient(270deg,
-    var(--agreen),/*cyan*/
-    var(--acore),/*blue*/
-    var(--avio),/*purple*/
-    var(--adark),/*navy blue*/
-    var(--avio),/*purplr*/
-    var(--acore),/*blue*/
-    var(--agreen)/*cyan*/
-  );
-  background-size: 1000% 1000%;
-  animation: a-shift 45s ease-in-out infinite;
+  background: black;
   color: white;
   margin: 0;
   line-height: 1.6; /* smoother reading */
@@ -94,6 +84,10 @@ ul li {
   font-size: 2vw;
 }
 
+/*stylized(attention)*/
+.shadow{
+  text-shadow: 3px 3px 6px rgba(145, 145, 145, 0.6); 
+}
 /* ------------------------------
    LAYOUT
 --------------------------------*/
@@ -122,11 +116,11 @@ section {
 .orb{
   width: 40px;
   height: 40px;
-  background: radial-gradient(circle, var(--acore), var(--cpink));
+  background: radial-gradient(circle, #ffffff, #000000);
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  box-shadow: 0 0 30px var(--cpurp);
+  box-shadow: 0 0 30px #666666:
   transition: transform 0.05s linear;
   z-index: 9999;
 }
@@ -146,7 +140,7 @@ section {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--cpurp), var(--cpink));
+  background: radial-gradient(circle, #000000, #ffffff);
   filter: blur(12px);
   pointer-events: none;
   transform: translate(-50%, -50%);
