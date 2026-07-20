@@ -166,7 +166,7 @@ section {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--cpink), var(--cdark));
+  background: radial-gradient(circle, #ffffff, #828282);
   pointer-events: none;
   filter: blur(4px);
   opacity: 0;
