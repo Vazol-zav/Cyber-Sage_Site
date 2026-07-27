@@ -83,6 +83,11 @@ ul li {
   margin-bottom: 0.5rem;
   font-size: 2vw;
 }
+/*link format*/
+a {
+  color: white;
+  text-decoration: none;
+}
 
 /*stylized(attention)*/
 .shadow{
