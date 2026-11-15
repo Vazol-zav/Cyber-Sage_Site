@@ -1,78 +1,25 @@
 <body>
   <script>
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
-    alert("REDACTED")
-    alert("LEAVE NOW")
+    let active = true;
+
+    function redacted() {
+      alert("REDACTED");
+      alert("LEAVE NOW");
+    }
+
+    function CT() {
+ let now = new Date();
+      let target =
+        now.getHours === 3 &&
+        now.getMinutes === 0 &&
+        now.getSeconds === 0;
+    
+    if( active && !target){
+      redacted();
+    } else { clearInterval(interval);
+           }
+    }
+    let interval = setInterval(CT, 1000);
+
   </script>
 </body>
