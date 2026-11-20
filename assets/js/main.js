@@ -91,6 +91,47 @@ window.addEventListener("click", (e) => {
   spawnRuneSigil(e.clientX, e.clientY);
   F=0
   }
+  themeShift()
 });
 /*theme stuff*/
+//set up?
+window.matchMedia("(prefers-color-scheme: dark)");
 
+let Themes = localStorage.getItem("Themes") || "system";
+//clicky clicky theme shift (Tbutton code)  
+function themeShift(){
+  let selectedTheme;
+  if (Themes==="system"){
+    selectedTheme = systemPreference.matches ? "light":"dark";
+  } else {selectedTheme = Themes; 
+}
+  
+ document.getElementById("themeStylesheet").href =
+    selectedTheme + ".css";
+
+  document.getElementById("themeButton").textContent = Themes;
+}
+function switchTheme() {
+  if (themeMode === "system") {
+    themeMode = "dark";
+  } else if (themeMode === "dark") {
+    themeMode = "light";
+  } else {
+    themeMode = "system";
+  }
+
+  localStorage.setItem("themeMode", themeMode);
+  applyTheme();
+}
+
+systemPreference.addEventListener("change", () => {
+  if (themeMode === "system") {
+    applyTheme();
+  }
+});
+
+document.getElementById("themeButton").addEventListener(
+  "click", switchTheme
+);
+
+applyTheme();
